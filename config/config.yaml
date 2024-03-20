@@ -1,0 +1,25 @@
+artifacts_root: artifacts
+
+data_ingestion:
+   root_dir: artifacts/data_ingestion
+   source_URL: https://starlab-public.s3.amazonaws.com/work_sample/predictive_maintenance.csv
+
+data_transformation:
+   data_path: artifacts\data_ingestion\maintence_costreduction_pred.csv
+   train_path: artifacts\data_transformation
+   test_path:  artifacts\data_transformation
+   cleaned_data: artifacts\data_transformation
+
+model_trainer:
+   train_path: artifacts\data_transformation\train_data.csv
+   test_path:  artifacts\data_transformation\test_data.csv
+   model_path: artifacts\model_trainer
+   # scale_path: artifacts\model_trainer
+
+
+prediction_trainer:
+   scale_path: artifacts\model_trainer
+   model_path: artifacts\model_trainer
+   
+
+   

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Maintance Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Data Prediction Form</h2>
+    <form action='/predict' method='post' >
+        <label for="metric1">Metric 1:</label>
+        <input type="text" id="metric1" name="metric1" required><br>
+
+        <label for="metric2">Metric 2:</label>
+        <input type="number" id="metric2" name="metric2" required><br>
+
+        <label for="metric3">Metric 3:</label>
+        <input type="number" id="metric3" name="metric3" required><br>
+
+        <label for="metric4">Metric 4:</label>
+        <input type="number" id="metric4" name="metric4" required><br>
+
+        <label for="metric5">Metric 5:</label>
+        <input type="number" id="metric5" name="metric5" required><br>
+
+        <label for="metric6">Metric 6:</label>
+        <input type="number" id="metric6" name="metric6" required><br>
+
+        <label for="metric7">Metric 7:</label>
+        <input type="number" id="metric7" name="metric7" required><br>
+
+        <label for="metric9">Metric 9:</label>
+        <input type="number" id="metric9" name="metric9" required><br>
+
+        <label for="months">Months:</label>
+        <input type="number" id="months" name="months" required><br>
+
+        <label for="day">Day:</label>
+        <input type="number" id="day" name="day" required><br>
+
+        <label for="model_name">Model Name:</label>
+        <select id="model_name" name="model_name" required>
+            <option value="0">S1F0</option>
+            <option value="1">S1F1</option>
+            <option value="2">W1F0</option>
+            <option value="3">W1F1</option>
+            <option value="4">Z1F0</option>
+            <option value="5">Z1F1</option>
+            <option value="6">Z1F2</option>
+            <!-- Add other model names as options -->
+        </select><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <div class="result" id="predictionResult">{{result}}</div>
+</body>
+</html>

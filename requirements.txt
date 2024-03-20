@@ -1,0 +1,22 @@
+pandas 
+numpy 
+seaborn 
+matplotlib
+scikit-learn
+xgboost 
+imblearn
+ensure==1.0.2
+pyYAML
+joblib
+Flask
+flask
+Flask-Cors
+python-box==6.0.2
+pathlib
+typing 
+notebook
+
+
+
+-e .
+
