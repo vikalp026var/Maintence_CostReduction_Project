@@ -45,5 +45,6 @@ pip install -r requirements.txt
 python app.py
 ```
 6.Open the browser and write the localhost:5000/
+
 7.Give the inputs and get the prediction 
 
