@@ -31,19 +31,19 @@ git clone https://github.com/vikalp026var/Maintenance_CostReduction_Project.git
 2. Create the virtual Environment :
 ```bash
 conda create -p myenv python==3.8 -y
-bash```
+```
 3.Activate the Environment:
 ```bash
 conda activate myenv
-```bash
+```
 4. Install the requirements.txt
 ``bash
 pip install -r requirements.txt
-bash```
+```
 5.run the app.py
 ```bash
 python app.py
-bash```
+```
 6.Open the browser and write the localhost:5000/
 7.Give the inputs and get the prediction 
 
